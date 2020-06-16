@@ -1,3 +1,11 @@
+
+We established a store(vault) in App.js.  We gave store a reducer(cashier) and initial state( original balance  )
+
+The reducer(cashier) was imported from the Reducer folder.
+
+The reducer was given state.  Reducer always returns state, presumably after some actions have been performed.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 # Hello Redux
