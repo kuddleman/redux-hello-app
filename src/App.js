@@ -1,18 +1,42 @@
-import React, { Component } from "react";
-import HelloWorld from "./HelloWorld";
-import reducer from './reducers/'   
-// do I need to indicate index on line 3?
-
-import { store } from './store'
+// import React, { Component } from "react";
+// import HelloWorld from "./HelloWorld";
+// import ButtonGroup from './ButtonGroup'
 
 
+// import { store } from './store'
 
-class App extends Component {
+
+
+// class App extends Component {
   
  
+//   render() {
+//     return (
+//       <div>
+//         <HelloWorld key={1} tech={ store.getState().tech } />;
+//         <ButtonGroup key={2} 
+//                       technologies={["React", "Elm", "React-redux"]}
+//         />
+//       </div>
+//     )
+//   }
+// }
+
+import React, { Component } from "react";
+import HelloWorld from "./HelloWorld";
+import ButtonGroup from "./ButtonGroup";
+import { store } from "./store";
+
+class App extends Component {
   render() {
-    return <HelloWorld tech={ store.getState().tech } />;
+    return [
+      <HelloWorld key={1} tech={store.getState().tech} />,
+      <ButtonGroup key={2} technologies={["React", "Elm", "React-redux"]} />
+    ];
   }
 }
 
 export default App;
+
+
+
